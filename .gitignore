@@ -1,1 +1,3 @@
 python_materiales
+__pycache__
+.DS_Store
