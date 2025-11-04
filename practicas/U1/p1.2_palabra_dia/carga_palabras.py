@@ -35,7 +35,7 @@ if __name__ == "__main__":
   # --------------------------
   # Ejemplo de uso:
   palabras = cargar_palabras_limpias("palabras_5.txt")
-  print(palabras[20:])  # muestra las primeras 20 palabras
+  print(palabras[23000])  # muestra las primeras 20 palabras
 
 
 
