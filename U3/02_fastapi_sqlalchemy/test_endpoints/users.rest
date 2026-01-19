@@ -1,0 +1,47 @@
+GET http://localhost:8000/
+
+###
+GET http://127.0.0.1:8000/openapi.json
+
+###
+GET http://127.0.0.1:8000/items/12
+
+### este request dará error ya que esperamos un entero
+GET http://127.0.0.1:8000/items/algo
+
+###
+GET http://127.0.0.1:8000/users/
+
+###
+GET http://127.0.0.1:8000/users/f
+
+###
+GET http://127.0.0.1:8000/users/2
+
+###
+GET http://127.0.0.1:8000/users/4
+
+###
+POST http://127.0.0.1:8000/users/
+content-type: application/json
+
+{
+    "id": 4,
+    "name": "Vicent",
+    "surname": "Foo",
+    "email": "vicent@foo.es",
+    "age": 3
+}
+
+
+###
+POST http://127.0.0.1:8000/users/
+content-type: application/json
+
+{
+    "id": 6,
+    "name": "Vicent",
+    "surname": "Foo",
+    "email": "vicent@@foo.es",
+    "age": 3
+}
