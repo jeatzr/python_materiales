@@ -25,11 +25,10 @@ GET http://127.0.0.1:8000/users/4
 POST http://127.0.0.1:8000/users/
 content-type: application/json
 
-{
-    "id": 4,
+{ 
     "name": "Vicent",
     "surname": "Foo",
-    "email": "vicent@foo.es",
+    "email": "vicent4@foo.es",
     "age": 3
 }
 
@@ -45,3 +44,8 @@ content-type: application/json
     "email": "vicent@@foo.es",
     "age": 3
 }
+
+
+
+###
+DELETE http://127.0.0.1:8000/users/3

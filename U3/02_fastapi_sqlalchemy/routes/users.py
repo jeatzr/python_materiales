@@ -40,7 +40,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
             detail="El usuario ya existe"
         )
 
-    new_user = User(**user.dict())
+    new_user = User(**user.model_dump())
     db.add(new_user)
     db.commit()
     db.refresh(new_user)
@@ -55,7 +55,7 @@ def update_user(user_id: int, user: UserCreate, db: Session = Depends(get_db)):
             detail="Usuario no encontrado"
         )
 
-    for key, value in user.dict().items():
+    for key, value in user.model_dump().items():
         setattr(stored_user, key, value)
 
     db.commit()
